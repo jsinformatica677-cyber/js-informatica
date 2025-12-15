@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Star, CheckCircle2, MessageCircle } from 'lucide-react';
+import { CheckCircle2, MessageCircle } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
 
 export const Hero: React.FC = () => {
@@ -69,11 +69,14 @@ export const Hero: React.FC = () => {
           <div className="flex-1 relative w-full max-w-lg lg:max-w-none flex justify-center">
             <div className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden border-2 border-zinc-900 bg-zinc-950 shadow-2xl shadow-brand-900/10 group">
                 {/* 
-                  Placeholder for the specific "Logo and Character" image.
+                  CORREÇÃO: Imagem reduzida para 600px e qualidade 40 para economizar dados
                 */}
                 <img 
-                  src="https://images.unsplash.com/photo-1591196153041-faf3a11500dc?auto=format&fit=crop&q=80&w=1000" 
+                  src="https://images.unsplash.com/photo-1591196153041-faf3a11500dc?auto=format&fit=crop&q=40&w=600&fm=webp" 
                   alt="JS Informatica Personagem e Logo" 
+                  width="600"
+                  height="450"
+                  fetchPriority="high"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                 />
                 

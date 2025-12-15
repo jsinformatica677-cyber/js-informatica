@@ -67,13 +67,14 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
+// CORREÇÃO: Imagens otimizadas (q=40, w=300, webp) para reduzir tamanho do site para <8MB
 export const PRODUCTS: Product[] = [
   {
     id: '1',
     name: 'Carregador Turbo 20W',
     price: 89.90,
     category: 'Acessórios',
-    image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&q=40&w=300&fm=webp',
     popular: true
   },
   {
@@ -81,14 +82,14 @@ export const PRODUCTS: Product[] = [
     name: 'Cabo USB-C Reforçado',
     price: 35.00,
     category: 'Cabos',
-    image: 'https://images.unsplash.com/photo-1595925925055-75e15647f0d0?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1595925925055-75e15647f0d0?auto=format&fit=crop&q=40&w=300&fm=webp'
   },
   {
     id: '3',
     name: 'Película de Hidrogel',
     price: 50.00,
     category: 'Proteção',
-    image: 'https://images.unsplash.com/photo-1627560879685-6ba837b79417?auto=format&fit=crop&q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1627560879685-6ba837b79417?auto=format&fit=crop&q=40&w=300&fm=webp',
     popular: true
   },
   {
@@ -96,7 +97,7 @@ export const PRODUCTS: Product[] = [
     name: 'Fone Bluetooth JS-Pro',
     price: 120.00,
     category: 'Áudio',
-    image: 'https://images.unsplash.com/photo-1572569028738-411a29639581?auto=format&fit=crop&q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1572569028738-411a29639581?auto=format&fit=crop&q=40&w=300&fm=webp',
     popular: true
   },
   {
@@ -104,13 +105,13 @@ export const PRODUCTS: Product[] = [
     name: 'Capa Anti-Impacto Transparente',
     price: 45.00,
     category: 'Proteção',
-    image: 'https://images.unsplash.com/photo-1603539564883-2070f7d5c2d3?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1603539564883-2070f7d5c2d3?auto=format&fit=crop&q=40&w=300&fm=webp'
   },
   {
     id: '6',
     name: 'Mouse Gamer RGB',
     price: 95.00,
     category: 'Periféricos',
-    image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&q=80&w=400'
+    image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&q=40&w=300&fm=webp'
   }
 ];

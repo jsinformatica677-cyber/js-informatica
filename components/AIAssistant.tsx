@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Loader2, Bot } from 'lucide-react';
-import { sendMessageToGemini } from '../services/geminiService';
 import { ChatMessage } from '../types';
 
 export const AIAssistant: React.FC = () => {
@@ -41,6 +40,8 @@ export const AIAssistant: React.FC = () => {
     setMessages(prev => [...prev, newUserMsg]);
 
     try {
+      // CORREÇÃO: Dynamic import para evitar carregar o SDK pesado da Google no início
+      const { sendMessageToGemini } = await import('../services/geminiService');
       const responseText = await sendMessageToGemini(userText);
       
       const newModelMsg: ChatMessage = {
@@ -50,10 +51,11 @@ export const AIAssistant: React.FC = () => {
       };
       setMessages(prev => [...prev, newModelMsg]);
     } catch (error) {
+      console.error(error);
       const errorMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'model',
-        text: "Desculpe, ocorreu um erro. Tente novamente mais tarde.",
+        text: "Desculpe, ocorreu um erro ou a conexão está lenta. Tente novamente.",
         isError: true
       };
       setMessages(prev => [...prev, errorMsg]);
@@ -132,7 +134,7 @@ export const AIAssistant: React.FC = () => {
             <div className="flex justify-start">
               <div className="bg-black p-3 rounded-2xl rounded-tl-none shadow-sm border border-zinc-900 flex items-center gap-2">
                 <Loader2 size={16} className="animate-spin text-brand-500" />
-                <span className="text-xs text-zinc-500">Digitando...</span>
+                <span className="text-xs text-zinc-500">Conectando ao especialista...</span>
               </div>
             </div>
           )}
